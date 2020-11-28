@@ -2,7 +2,7 @@
 
 - Add the Following Script in the Body Tag of Website 
 
-  `<div id="webchat"></div>
+  ```<div id="webchat"></div>
 <script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
 <script>
   WebChat.default.init({
@@ -15,7 +15,7 @@
     subtitle: "I am Admin ChatBot",
     params: {"storage": "session"}
   })
-</script>`
+</script>```
 
 - Change the Socket URL to RASA X Server URL
 
