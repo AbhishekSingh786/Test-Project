@@ -18,7 +18,7 @@
   })
 </script>
 
-- Change the Socket URL to RASA X Server URL
+Note - Change the socketUrl with the RASA X Server URL
 
 # Steps For RASA X Installation on Server
 
