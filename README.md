@@ -1,7 +1,8 @@
 # Steps For Adding Widget in the Website
 
 - Add the Following Script in the Body Tag of Website 
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
 <div id="webchat"></div>
 <script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
 <script>
@@ -16,7 +17,7 @@
     params: {"storage": "session"}
   })
 </script>
-|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
 
 - Change the Socket URL to RASA X Server URL
 
