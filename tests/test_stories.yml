@@ -1,0 +1,63 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: happy story
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      how can you help me
+    intent: qa
+  - action: utter_qa
+  - user: |
+      show contact number
+    intent: contact_me
+  - action: utter_contact_me
+  - user: |
+      how do i use admin panel features
+    intent: learn_more
+  - action: utter_learn_more
+  - user: |
+      you are awesome!
+    intent: greet_bot
+  - action: utter_greet_bot
+  - user: |
+      show company info
+    intent: company_info
+  - action: utter_company_info
+  - user: |
+      thank you
+    intent: thanks
+  - action: utter_thanks_help
+  - user: |
+      add a new product
+    intent: new_product
+  - action: utter_new_product
+  - action: utter_did_that_help
+  - user: |
+      add new attribute to product
+    intent: new_attribute
+  - action: utter_new_attribute
+  - action: utter_did_that_help
+  - user: |
+      publish product to market
+    intent: publish_market
+  - action: utter_publish_market
+  - action: utter_did_that_help
+  - user: |
+      unpublish from market
+    intent: stop_market
+  - action: utter_smarket
+  - action: utter_did_that_help
+  - user: |
+      now i am feeling good
+    intent: mood_great
+  - action: utter_happy
+  - user: |
+      goodbye
+    intent: goodbye
+  - action: utter_goodbye

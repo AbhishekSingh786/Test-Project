@@ -1,0 +1,999 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - how are you
+    - good morning
+    - good evening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - stop
+
+- intent: qa
+  examples: |
+    - How can You Help me
+    - What can You Help me With
+    - Can You Help me
+    - what can you tell me
+    - how can you help me
+
+- intent: hour
+  examples: |
+    - hour
+    - hours
+    - tell me business hours
+    - business hours
+    - show business hours
+    - what are business hours here
+
+- intent: stats
+  examples: |
+    - show statistics
+    - show stats
+    - show overall statistics
+    - show overall stats
+    - general statistics
+    - common stats
+    - common statistics
+    - personal statistics
+
+- intent: no_login
+  examples: |
+    - I can't Login to my Account
+    - I cannot login
+    - unable to login
+    - I am unable to login
+
+- intent: login
+  examples: |
+    - how to login
+    - how to register
+    - login
+    - register
+    - login page
+    - register page
+
+- intent: learn_more
+  examples: |
+    - refer admin guide
+    - admin guide reference
+    - How to use Admin Panel
+    - I need more Information
+    - Provide More Information about admin Features 
+    - Where can I search for more information
+    - search for more information
+    - Help Document
+    - User Docs
+    - user doucments
+    - Show Documentation
+    - How to use admin features
+    - Admin Panel is So Confusing
+    - can you elaborate
+    - can you explain
+    - search more
+    - search for more
+    - i want more information
+    - please
+    - please help
+    - help me
+    - help
+
+- intent: greet_bot
+  examples: |
+    - You are Awesome!
+    - You are Great
+    - You are Fantastic
+    - Awesome!
+    - Fantastic
+    - Nice to meet you
+
+- intent: contact_me
+  examples: |
+    - contact number
+    - contact no
+    - show contact no
+    - find contact number
+    - how to contact
+    - customer service 
+    - phone number
+
+- intent: company_info
+  examples: |
+    - show information about your company
+    - company information
+    - what is your company
+    - company info
+
+- intent: affirm
+  examples: |
+    - Yes
+    - Yeah 
+    - yeah
+    - yes
+    - yupp
+    - k 
+    - ok
+    - Okay
+    - good
+    - nice
+    - great
+    - absolutely
+    - sure
+    - Sure
+    - okay
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - nahh
+    - never
+    - nope
+    - I don't think so
+    - don't like that
+    - not
+    - nor
+    - Not
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - amazing
+    - happy
+    - i am feeling good
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am happy
+    - I am soo Happy
+    - super stoked
+    - feeling good
+    - feeling great
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - :)
+    - ;)
+
+- intent: mood_unhappy
+  examples: |
+    - I am unhappy
+    - I am not happy
+    - I am sad
+    - I am disappointed
+    - feeling sad
+    - super sadd
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so sad
+    - I am not feeling well
+    - I am not Good
+    - not good
+    - I am not Fine
+    - :(
+
+- intent: bot_chat
+  examples: |
+    - hi bot
+    - hello bot
+    - hey bot
+
+- intent: bot_mood
+  examples: |
+    - how are you
+    - how are you bot
+    - how you doing
+    - whatsupp
+    - supp
+
+- intent: bot_challenge
+  examples: |
+    - who are you
+    - what is your name?
+    - are you robot
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: thanks
+  examples: |
+    - Thanks
+    - thank you
+    - thnq
+    - thank u
+    - thankyou
+    - thnks
+    - thnq
+
+# User Management------------------------------------------------------------------------------------------------------
+
+- intent: remove_vendor
+  examples: |
+    - remove the vendors
+    - remove account of vendors
+    - remove vendor
+    - delete vendor
+    - delete vendors account
+
+- intent: new_vendor
+  examples: |
+    - new vendor
+    - create more vendors
+    - create new vendor
+    - add more vendors
+    - add new vendors
+    - create Vendors
+    - add more vendors
+    - add Vendors
+    - add sellers
+    - add new sellers
+
+- intent: vendor_page
+  examples: |
+    - Show Vendors List
+    - search vendors
+    - vendor details
+    - show vendor details
+    - find vendors
+    - show all vendors
+    - vendors page
+    - show vendors list
+    - Vendor
+    - Vendor list
+    - Seller
+    - Seller list
+    - Seller Info
+    - Seller Information
+    - Seller Details
+    - Show Seller Details
+
+- intent: edit_vendor
+  examples: |
+    - edit vendor details
+    - edit vendor profile
+    - change vendor details
+    - change vendor profile
+
+- intent: customer_page
+  examples: |
+    - registered customers
+    - show registered customers
+    - Open customers list
+    - show customer details
+    - list of customers
+    - show all Customers
+    - view customer details
+    - User Management
+    - export customer list
+    - User Management Page
+    - Buyer 
+    - Buyer list
+    - Buyer Info
+    - Buyer Information
+    - Customer Information
+    - Customer Details
+
+- intent: new_customer
+  examples: |
+    - add new customer
+    - add Customer
+    - add customers
+    - add more customers
+    - create customers
+    - create new Customers
+
+- intent: edit_customer
+  examples: |
+    - i want to edit customer details
+    - edit user detials
+    - edit customer details
+    - edit details of customer
+    - edit details of user
+    - change customer details
+    - change details of users
+    - change details of customers
+    - change user details
+
+- intent: deactivate_customer
+  examples: |
+    - deactivate user
+    - deactivate user account
+    - deactivate customer
+    - deactivate customer account
+
+- intent: reactivate_customer
+  examples: |
+    - activate customer
+    - activate a customer account
+    - activate user
+    - activate a user account
+    - reactivate customer
+    - reactivate customer account
+
+- intent: customer_search
+  examples: |
+    - search customer
+    - search user
+    - search for customers
+    - how to search customers
+    - search user by first name
+    - search user by last name
+    - search user by company name
+    - search user by phone no
+    - search user by ip address
+    - search user by email
+    - search user by zip code
+
+- intent: remove_customer
+  examples: |
+    - Delete Customers
+    - delete customer account
+    - remove the customers
+    - remove accounts of customer
+    - I want to remove customers
+    - remove customer 
+    - delete customer accounts
+    - delete the Customers
+
+# Product Management --------------------------------------------------------------------------------------------------
+
+- intent: publish_market
+  examples: |
+    - Publish Markets
+    - Publish Product to Market
+    - Publish the Products
+    - publish product in the market
+    - new product in the market
+    - add product to market
+    - adding product to market
+    - how to add product to market
+    - create new product in the market
+    - add new product in market
+    - how to add new product in market
+
+- intent: new_product
+  examples: |
+    - add product
+    - add new product    
+    - create a new product
+    - create new products
+    - create products
+    - new product
+    - how to add new product
+    - i want to add new product
+
+- intent: product_page
+  examples: |
+    - manage products
+    - product management
+    - product page
+    - show all products
+    - show product catalog
+    - product catalog
+    - Open Products Page
+    - Show Products
+    - List of All Products 
+    - open product page
+    - find product page
+
+- intent: edit_product
+  examples: |
+    - change text in ordertable
+    - change text in default orderbook
+    - change contents of orderbook
+    - change text in orderbook
+    - change product price
+    - edit product price
+    - edit product [Apple MacBook Pro](PNAME)
+    - edit product [Digital Storm](PNAME)
+    - edit product [Lenovo Idea](PNAME)
+    - edit orderbooks
+    - product details
+    - change product
+    - change product details
+
+- intent: delete_product
+  examples: |
+    - delete product
+    - remove product
+    - how to remove product
+    - i want to remove product
+    - i want to delete product
+    - how to delete product
+    - delete [Apple MacBook Pro](PNAME) from products
+    - delete [Digital Storm](PNAME)
+    - delete product [Lenovo Idea](PNAME)
+    - remove [Digital Storm](PNAME)
+    - remove product [Lenovo IdeaS](PNAME)
+
+- intent: new_brand
+  examples: |
+    - add a new brand
+    - add new brand
+    - add brands
+    - create new brand
+    - create new brands
+    - create a brand
+    - new brand
+
+- intent: brands_page
+  examples: |
+    - search brand by name
+    - search brand
+    - search for brand page
+    - search brands
+    - how to search for a brand
+    - Brands Page
+    - Show Brands Page
+    - Show All Brands
+    - list of brands
+    - open brands list
+    - brands list
+
+- intent: edit_brand
+  examples: |
+    - edit a brand
+    - edit brand
+    - change brand
+    - change a brand
+
+- intent: delete_brand
+  examples: |
+    - Delete Brand
+    - I want to remove brand
+    - I want to delete brand
+    - Remove Brand
+
+- intent: new_category
+  examples: |
+    - Add New Categories
+    - Make New Categories
+    - add new category
+    - add a new cateogory
+    - add parent category
+    - create new category in brand
+    - add new category in brand
+    - new categories in brand
+    - create new category
+    - create new categories
+    - Add Category
+
+- intent: edit_category
+  examples: |
+    - change category
+    - do changes in the category
+    - select parent category
+    - edit categories
+    - edit a category
+
+- intent: delete_category
+  examples: |
+    - delete the category
+    - delete category
+    - delete categories
+    - remove all categories
+    - remove category
+
+- intent: product_attribute
+  examples: |
+    - find product attribute
+    - product attribute
+    - open product attributes
+    - show product attribute
+    - product attribute page
+    - show product attribute page
+
+- intent: new_attribute
+  examples: |
+    - create a new attribute
+    - add a new attribute
+    - new attribute
+    - how to create a new attribute
+    - how do i create a new attribute
+    - add new attribute to product
+    - add attributes to product
+    - add a new product attribute to product
+    - how to add product attribute to product
+
+- intent: edit_attributes
+  examples: |
+    - how to edit product attribute
+    - edit attributes
+    - edit product attributes
+    - customize product attribute
+    - change product attributes
+    - edit product specifications
+    - i want to edit product attributes
+
+- intent: delete_attribute
+  examples: |
+    - delete product attributes
+    - remove product attribute
+    - remove attribute
+    - delete attributes
+    - remove a attribute
+    - delete a attributes
+
+# Market Management
+
+- intent: market_type
+  examples: |
+    - create new buy market
+    - change market type of product
+    - create new sell market
+    - create a new sale market
+    - create new buy and sell market
+    - Create market sales auction only
+    - Create market sell auction only
+    - Create market buy auction only
+    - create market buy only
+    - create market sell only
+    - create market buy and sell 
+    - create market traditional
+
+- intent: market_page
+  examples: |
+    - show market
+    - Open markets
+    - Show market
+    - market Page
+    - all markets
+    - list all markets
+    - view all markets
+    - show marketplace
+    - show orderbook
+    - open orderbook
+    - view marketplace
+    - open marketplace
+    - market search
+    - customize market
+    - market customization
+    - search market
+    - search market by 
+
+# Admin Web Trade View ------------------------------------------------------------------------------------------------
+
+- intent: market_order
+  examples: |
+    - market order
+    - show all market orders
+    - show me market order
+    - open market order
+    - show market order
+    - list market order
+    - view market order
+
+- intent: ecommerce_orders
+  examples: |
+    - ecommerce orders
+    - Open Orders Lists
+    - order list
+    - view orders list
+    - show all orders
+    - find order list
+    - pending orders
+    - show pending orders
+    - All Orders 
+    - show ecommerce orders    
+    - ecommerce orders
+    - view all ecommerce orders
+    - web market tradeview
+    - web market factory
+    - purchases
+
+- intent: trades
+  examples: |   
+    - Previous Trades
+    - Historical Trades
+    - show Previous Trades
+    - i want to see all trades
+    - all trades
+    - trade
+
+- intent: margin_commission_gesture
+  examples: |
+    - Commission
+    - adjust buyer commission
+    - adjust seller commission
+    - Seller Commission
+    - Buyer Commission
+    - Market Transaction fee
+    - change market transaction fee
+    - change commission fee
+    - Change Commission Rates
+    - Update Commission 
+    - View Active Trades
+    - Active Trades
+    - show all commission
+    - margin commercial gesture
+    - open commission page
+
+- intent: experts
+  examples: |
+    - Show Experts
+    - Find Experts
+    - List Experts
+    - All Experts
+
+# Web Market Factory --------------------------------------------------------------------------------------------------
+
+- intent: stop_market
+  examples: |
+    - stop Market
+    - stop markets
+    - end Market
+    - unpublish market
+    - delete market
+    - delete all markets
+    - remove market
+    - remove from market
+
+- intent: market_management
+  examples: |
+    - add market attributes
+    - add attributes in market
+    - edit market attributes
+    - edit global attributes
+    - change market attributes
+
+# Market Configurations -----------------------------------------------------------------------------------------------
+
+
+
+
+# Misc ----------------------------------------------------------------------------------------------------------------
+
+- intent: myacc
+  examples: |
+    - vendor review
+    - buyers review
+    - due payment
+    - past trades
+
+- intent: dashboard_reference
+  examples: |
+    -  best seller by quantity
+    -  best seller by amount
+    -  best seller by price
+    -  Bestsellers by quantity
+    -  Bestsellers by amount
+    -  Bestsellers by price
+    -  Latest Orders
+    -  Popular search keywords
+    -  Order totals
+    -  Incomplete orders
+    -  view new customers registered
+    -  New Customers
+    -  view new customers
+    -  count of new customers
+
+- intent: shipping
+  examples: |
+    - Show Shipping Providers
+    - List Shipping Providers
+    - Shipping Providers
+    - Change shipping Provider
+
+- intent: public_profile
+  examples: |
+    - Public Profile
+    - setup Customer Profile
+    - Set up Public Profile
+
+- intent: order_match
+  examples: |
+    - orders match
+    - show matched orders
+    - show order match
+    - order match list
+    - show order match list
+
+- intent: order_banner
+  examples: |
+    - Customize the rolling price banner
+    - change price banner
+    - edit the price banner
+    - customize rolling price banner
+
+- intent: add_on
+  examples: |
+    - add new controls on main page
+    - add new controls
+    - add search bar
+    - add product menu
+    - add to home page
+    - change default site menu
+    - change site menu
+    - change default theme
+    - change theme 
+    - add footer items
+    - add top menu items
+    - add blogposts
+    - add social media links
+    - add to top menu
+    - add to footer menu
+
+#----------------------------------------------------------------------------------------------------------------------
+
+- intent: get_link
+  examples: |
+    - open google
+    - find google
+    - go to google
+
+- intent: order_book
+  examples: |
+    - Add the user link in order tables 
+    - Add user link in order book
+    - Display user profile in order book
+    - Display date in order book
+    - Order Book items
+    - show order book items
+
+- intent: market_delta
+  examples: |
+    - change market delta
+    - market delta
+    - price delta range
+    - edit delta 
+    - edit market delta
+
+- intent: setting_page
+  examples: |
+    - edit settings
+    - open setting
+    - settings
+    - change settings
+    - change theme settings
+    - general settings
+    - show settings
+    - open settings page
+    - go to settings page
+    - Enable Active Orders
+    - Disable Active Orders
+    - activate expert module
+    - activate expert functionality
+    - enable experts
+    - enable expert module
+    - enable expert functionality
+    - expertise functionality
+    - expertise service
+    - Change Market Configuration
+    - View Market Configuration
+    - market configuration
+    - unprocessed trades
+    - show unprocessed trades
+    - registration types
+    - display active orders
+
+- intent: customer_review
+  examples: |
+    - Show Customer Reviews Page
+    - customer Reviews Page
+    - Delete review
+    - remove a review
+    - approve review
+    - disapprove review
+    - search reviews
+    - Customer Review
+    - show reviews
+    - open reviews
+    - find reviews
+    - show customer reviews
+
+- intent: product_review
+  examples: |
+    - show product reviews page
+    - product reviews page
+    - delete product review
+    - remove product review
+    - approve product review
+    - product review
+    - disapprove product review
+    - search product review
+    - show product review
+    - open product review
+    - find product review
+
+- intent: shipment_page
+  examples: |
+    - open shipments page
+    - Show All Shipments
+    - Shipments
+    - Delivered Products
+    - Undelivered Products
+    - view shipments
+    - track shipments
+    - Shipment Page
+
+- intent: best_seller
+  examples: |
+    - Best Sellers 
+    - Show Best Sellers
+    - View Best Sellers
+    - best seller products
+    - best selling products
+
+- intent: low_stock
+  examples: |
+    - show low stocks
+    - low stock
+    - low stock products
+    - which products have low stocks
+
+- intent: worst_seller
+  examples: |
+    - Worst Sellers
+    - worst seller
+    - worst selling products
+    - lowest selling products
+    - product never purchased
+    - products never purchased
+
+- intent: product_tags
+  examples: |
+    - Add Product Tags
+    - Tags
+    - Remove Product Tags
+    - Delete Product Tags
+    - Product Tags Page
+    - Product Tags
+    - show product tags
+
+- intent: shopping_cart
+  examples: |
+    - Show Cart
+    - view cart
+    - show shopping cart
+    - find cart
+    - Show Wishlist
+    - view Wishlist
+    - Show Shopping Cart
+    - Cart
+
+- intent: market_profit
+  examples: |
+    - Profit
+    - Show Market Profit
+    - Market Profit
+    - Show Profit
+    - Market Profits Page
+
+- intent: return_request
+  examples: |
+    - Return Requests
+    - Show Return Requests
+    - Returns
+    - Show Returns
+    - return requests page
+
+- intent: global_market_config
+  examples: |
+    - Global Market Configuration
+    - Global Market List
+    - Show Global Market Configuration
+    - change order table columns
+    - customize order table columns
+    - add columns to be Displayed on home page
+    - columns in home page
+
+- intent: newsletter_subs
+  examples: |
+    - newsletter subscribers
+    - newsletter subscribers list
+    - list of newsletter subscribers
+    - show newsletter subscribers
+    - newsletter subs
+
+- intent: languages
+  examples: |
+    - Languages
+    - show languages
+    - add language
+    - remove language
+    - view all languages
+
+- intent: edit_page
+  examples: |
+    - Edit Pages
+    - content editor
+    - edit content of page
+    - CMS
+    - content management
+    - content management system
+    - open content management system
+
+- intent: tax_category
+  examples: |
+    - tax category
+    - show tax category
+    - open tax category
+    - add new tax category
+
+- intent: dashboard
+  examples: |
+    - Go to Dashboard
+    - dashboard
+    - return to dashboard
+    - open dashboard
+    - show dashboard
+    - home page
+    - show home page
+    - go to home page
+
+- intent: email
+  examples: |
+    - show emails
+    - emails
+    - open emails
+
+- intent: cemails
+  examples: |
+   - customer emails
+   - Customer Emails
+   - show customer emails
+   - show emails of customer
+   - find emails of customers
+
+- intent: vemails
+  examples: |
+    - vendor email
+    - Vendor Email
+    - show vendor email
+
+- intent: country_sales
+  examples: |
+    - Show Country Sales
+    - Country Sale
+    - Country Wise Sales
+
+- lookup: PNAME
+  examples: |
+    - Digital Storm
+    - Lenovo Idea
+    - Apple MacBook Pro
+    - Asus XO076H
+    - Samsung Galaxy S11
+    - HTC One Pro Max
+    - IPhone 12 Pro Max
+    - Sony Xperia X11
+    - Adobe Photoshop CS4
+    - Windows 8 Pro

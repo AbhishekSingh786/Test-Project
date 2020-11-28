@@ -1,0 +1,540 @@
+version: "2.0"
+
+rules:
+
+- rule: Bot Mood
+  steps: 
+    - intent: bot_mood
+    - action: utter_bot_mood
+
+- rule: BotChat
+  steps:
+    - intent: bot_chat
+    - action: utter_bot_chat
+
+- rule: MYACC
+  steps:
+    - intent: myacc
+    - action: utter_myacc
+
+- rule: Hours
+  steps:
+    - intent: hour
+    - action: utter_hour
+
+- rule: Stats
+  steps:
+    - intent: stats
+    - action: utter_stats
+
+- rule: No Login
+  steps:
+    - intent: no_login
+    - action: utter_no_login
+
+- rule: Login
+  steps:
+    - intent: login
+    - action: utter_login
+
+- rule: Learn More
+  steps:
+    - intent: learn_more
+    - action: utter_learn_more
+
+- rule: Bot Greetings
+  steps:
+    - intent: greet_bot
+    - action: utter_greet_bot
+
+- rule: Happy
+  steps: 
+    - intent: mood_great
+    - action: utter_happy
+
+- rule: Un Happy
+  steps: 
+    - intent: mood_unhappy
+    - action: utter_no_happy
+
+- rule: Contact Me
+  steps:
+    - intent: contact_me
+    - action: utter_contact_me
+
+- rule: Company Info
+  steps:
+    - intent: company_info
+    - action: utter_company_info
+
+- rule: Greet
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_help
+
+- rule: QA
+  steps:
+  - intent: qa
+  - action: utter_qa
+
+- rule: Fallback 
+  steps:
+    - intent: nlu_fallback
+    - action: utter_please_rephrase
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Thankyou
+  steps:
+  - intent: thanks
+  - action: utter_thanks_help
+
+- rule: happy
+  steps:
+    - intent: affirm
+    - action: utter_happy
+
+- rule: Provide Link 
+  steps:
+    - intent: get_link
+    - action: utter_link
+    - action: utter_did_that_help
+
+- rule: Not Worked
+  steps:
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_search
+
+- rule: Worked
+  steps:
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_positive
+
+- rule: Denial
+  steps:
+    - action: utter_please_rephrase
+    - intent: deny
+    - action: utter_no_happy
+
+- rule: Negative
+  steps:
+    - action: utter_positive
+    - intent: deny
+    - action: utter_no_happy
+
+- rule: Negate Search
+  steps:
+    - action: utter_search
+    - intent: deny
+    - action: utter_no_happy
+
+# User Management
+
+- rule: Publish Market
+  steps:
+    - intent: publish_market
+    - action: utter_publish_market
+    - action: utter_did_that_help
+
+- rule: New Vendor
+  steps:
+    - intent: new_vendor
+    - action: utter_new_vendor
+    - action: utter_did_that_help
+
+- rule: Vendor List
+  steps:
+    - intent: vendor_page
+    - action: utter_vendor_list
+    - action: utter_did_that_help
+
+- rule: Edit Vendor
+  steps:
+   - intent: edit_vendor
+   - action: utter_edit_vendor
+   - action: utter_did_that_help
+
+- rule: Remove Vendor
+  steps:
+    - intent: remove_vendor
+    - action: utter_remove_vendor
+    - action: utter_did_that_help
+
+- rule: Customer List
+  steps:
+    - intent: customer_page
+    - action: utter_customer_link
+    - action: utter_did_that_help
+
+- rule: New Customer
+  steps:
+    - intent: new_customer
+    - action: utter_new_customer
+    - action: utter_did_that_help
+
+- rule: Edit Customer
+  steps:
+    - intent: edit_customer
+    - action: utter_edit_customer
+    - action: utter_did_that_help
+
+- rule: Reactivate Customer
+  steps:
+    - intent: reactivate_customer
+    - action: utter_reactivate_customer
+    - action: utter_did_that_help
+
+- rule: Deactivate Customer
+  steps:
+    - intent: deactivate_customer
+    - action: utter_deactivate_customer
+    - action: utter_did_that_help
+
+- rule: Customer Search
+  steps:
+    - intent: customer_search
+    - action: utter_customer_search
+    - action: utter_did_that_help
+
+- rule: Remove Customer
+  steps:
+    - intent: remove_customer
+    - action: utter_remove_customer
+    - action: utter_did_that_help
+
+# Product Management
+
+- rule: New Product
+  steps:
+    - intent: new_product
+    - action: utter_new_product
+    - action: utter_did_that_help
+
+- rule: Edit Page
+  steps: 
+    - intent: edit_product
+    - action: utter_edit_product
+    - action: utter_did_that_help
+
+- rule: Product Page
+  steps: 
+    - intent: product_page
+    - action: utter_product_link
+    - action: utter_did_that_help
+
+- rule: Delete Product
+  steps: 
+    - intent: delete_product
+    - action: utter_delete_product
+    - action: utter_did_that_help
+
+- rule: New Brand
+  steps:
+    - intent: new_brand
+    - action: utter_new_brand
+    - action: utter_did_that_help
+
+- rule: Brands
+  steps:
+    - intent: brands_page
+    - action: utter_brands_link
+    - action: utter_did_that_help    
+
+- rule: Edit Brand
+  steps:
+    - intent: edit_brand
+    - action: utter_edit_brand
+    - action: utter_did_that_help
+
+- rule: Delete Brand
+  steps:
+    - intent: delete_brand
+    - action: utter_delete_brand
+    - action: utter_did_that_help
+    
+- rule: New Category
+  steps:
+    - intent: new_category
+    - action: utter_new_category
+    - action: utter_did_that_help
+
+- rule: Edit Category
+  steps:
+    - intent: edit_category
+    - action: utter_edit_category
+    - action: utter_did_that_help
+
+- rule: Delete Category
+  steps:
+    - intent: delete_category
+    - action: utter_delete_category
+    - action: utter_did_that_help
+
+- rule: Product Attribute
+  steps:
+    - intent: product_attribute
+    - action: utter_product_attribute
+    - action: utter_did_that_help
+
+- rule: New Attributes
+  steps:
+    - intent: new_attribute
+    - action: utter_new_attribute
+    - action: utter_did_that_help
+
+- rule: Edit Attributes
+  steps:
+    - intent: edit_attributes
+    - action: utter_edit_attributes
+    - action: utter_did_that_help
+
+- rule: Delete Attribute
+  steps:
+    - intent: delete_attribute
+    - action: utter_delete_attribute
+    - action: utter_did_that_help
+
+# Market Management
+
+- rule: mType
+  steps:
+    - intent: market_type
+    - action: utter_market_type
+    - action: utter_did_that_help
+
+# Admin Web Trade
+
+- rule: Market Order
+  steps:
+    - intent: market_order
+    - action: utter_market_order
+    - action: utter_did_that_help
+
+- rule: ecommerce_orders
+  steps:
+    - intent: ecommerce_orders
+    - action: utter_ecommerce_orders
+    - action: utter_did_that_help
+
+- rule: Trade
+  steps:
+    - intent: trades
+    - action: utter_trades
+    - action: utter_did_that_help
+
+- rule: Commission
+  steps:
+    - intent: margin_commission_gesture
+    - action: utter_margin_commission_gesture
+    - action: utter_did_that_help
+  
+# Web Market Factory
+
+# Market Configurations
+
+- rule: DashRef
+  steps:
+    - intent: dashboard_reference
+    - action: utter_dashboard_reference
+
+- rule: Shipping
+  steps:
+    - intent: shipping
+    - action: utter_shipping
+    - action: utter_did_that_help
+
+- rule: Public Profile
+  steps:
+    - intent: public_profile
+    - action: utter_public_profile
+    - action: utter_did_that_help
+
+- rule: Order Match
+  steps:
+    - intent: order_match
+    - action: utter_order_match
+    - action: utter_did_that_help
+
+- rule: Order Banner
+  steps:
+    - intent: order_banner
+    - action: utter_order_banner
+    - action: utter_did_that_help
+
+- rule: Order Book
+  steps:
+    - intent: order_book
+    - action: utter_order_book
+    - action: utter_did_that_help
+
+- rule: addons
+  steps:
+    - intent: add_on
+    - action: utter_add_on
+    - action: utter_did_that_help
+
+- rule: mDelta
+  steps:
+    - intent: market_delta
+    - action: utter_market_delta
+    - action: utter_did_that_help
+
+- rule: Setting Link
+  steps: 
+    - intent: setting_page
+    - action: utter_setting_link
+    - action: utter_did_that_help
+
+- rule: Customer Review
+  steps:
+    - intent: customer_review
+    - action: utter_customer_review_list
+    - action: utter_did_that_help
+
+- rule: Product Review
+  steps:
+    - intent: product_review
+    - action: utter_product_review
+    - action: utter_did_that_help
+
+- rule: Shipments Page
+  steps:
+    - intent: shipment_page
+    - action: utter_shipmentp_link
+    - action: utter_did_that_help
+
+- rule: Best Seller
+  steps:
+    - intent: best_seller
+    - action: utter_best_seller
+    - action: utter_did_that_help
+
+- rule: market Management 
+  steps:
+    - intent: market_management
+    - action: utter_market_mgmt_link
+    - action: utter_did_that_help
+
+- rule: Markets
+  steps:
+    - intent: market_page
+    - action: utter_markets_link
+    - action: utter_did_that_help
+
+- rule: Experts
+  steps:
+    - intent: experts
+    - action: utter_experts
+    - action: utter_did_that_help
+
+- rule: End Market
+  steps: 
+    - intent: stop_market
+    - action: utter_smarket
+    - action: utter_did_that_help
+
+- rule: Product Tags
+  steps: 
+    - intent: product_tags
+    - action: utter_ptags
+    - action: utter_did_that_help
+
+- rule: Cart
+  steps: 
+    - intent: shopping_cart
+    - action: utter_cart
+    - action: utter_did_that_help
+
+- rule: MProfit
+  steps:
+    - intent: market_profit
+    - action: utter_mprofit
+    - action: utter_did_that_help
+
+- rule: Return Request
+  steps: 
+    - intent: return_request
+    - action: utter_return_rqst
+    - action: utter_did_that_help
+
+- rule: Global Market Config
+  steps:
+    - intent: global_market_config
+    - action: utter_global_market_config
+    - action: utter_did_that_help
+
+- rule: Newsletter Subscribers List
+  steps:
+    - intent: newsletter_subs
+    - action: utter_newsletter_subs
+    - action: utter_did_that_help
+
+- rule: Languages List
+  steps:
+    - intent: languages
+    - action: utter_languages
+    - action: utter_did_that_help
+
+- rule: Edit Page
+  steps:
+    - intent: edit_page
+    - action: utter_edit_page
+    - action: utter_did_that_help
+
+- rule: Country Sale
+  steps:
+    - intent: country_sales
+    - action: utter_country_sales
+    - action: utter_did_that_help
+
+- rule: Low Stock
+  steps:
+    - intent: low_stock
+    - action: utter_low_stock
+    - action: utter_did_that_help
+
+- rule: Worst Sell
+  steps:
+    - intent: worst_seller
+    - action: utter_worst_seller
+    - action: utter_did_that_help
+
+- rule: Tax Category
+  steps:
+    - intent: tax_category
+    - action: utter_tax_category
+    - action: utter_did_that_help
+
+- rule: Dashboard
+  steps:
+    - intent: dashboard
+    - action: utter_dashboard
+    - action: utter_did_that_help
+
+- rule: Email
+  steps:
+    - intent: email
+    - action: utter_ask_email
+
+- rule: Customer Emails
+  steps:
+    - intent: cemails
+    - action: utter_cemails
+    - action: utter_did_that_help
+
+- rule: Vendor Emails
+  steps:
+    - intent: vemails
+    - action: utter_vemails
+    - action: utter_did_that_help

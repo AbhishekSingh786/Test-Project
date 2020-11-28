@@ -1,0 +1,504 @@
+version: "2.0"
+
+entities:
+  - PNAME
+  
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - get_link
+  - shipping
+  - public_profile
+  - orderbook_edit
+  - order_match
+  - order_banner
+  - add_on
+  - market_delta
+  - market_type
+  - new_product
+  - new_category
+  - new_customer
+  - new_vendor
+  - remove_vendor
+  - product_page
+  - setting_page
+  - ecommerce_orders
+  - customer_review
+  - product_review
+  - shipment_page
+  - vendor_page
+  - customer_page
+  - best_seller
+  - market_order
+  - market_management
+  - trades
+  - market_page
+  - experts
+  - stop_market
+  - product_tags
+  - shopping_cart
+  - margin_commission_gesture
+  - market_profit
+  - return_request
+  - global_market_config
+  - newsletter_subs
+  - languages
+  - edit_page
+  - country_sales
+  - low_stock
+  - worst_seller
+  - tax_category
+  - dashboard
+  - email
+  - cemails
+  - vemails
+  - thanks
+  - publish_market
+  - edit_customer
+  - deactivate_customer
+  - reactivate_customer
+  - customer_search
+  - remove_customer
+  - new_brand
+  - brands_page
+  - edit_brand
+  - delete_brand
+  - edit_category
+  - delete_category
+  - product_attribute
+  - new_attribute
+  - edit_attributes
+  - delete_attribute
+  - edit_product
+  - order_book
+  - qa
+  - contact_me
+  - company_info
+  - greet_bot
+  - learn_more
+  - login
+  - no_login
+  - stats
+  - hour
+  - dashboard_reference
+  - myacc
+  - bot_chat
+  - edit_vendor
+  - delete_product
+  - bot_mood
+
+responses:
+  
+  utter_bot_chat:
+  - text: "Hello, How are You?"
+    buttons:
+    - title: "Good"
+      payload: '/mood_great'
+    - title: "Feeling Sad"
+      payload: '/mood_unhappy'
+
+  utter_myacc:
+  - text: "You can Find this Information on \n
+  [My Account Tab](http://test1.wearemad.io/customer/info)"
+
+  utter_dashboard_reference:
+  - text: "You Can Follow [Dashboard](http://test1.wearemad.io/Admin) for That"
+  - text: "Find this at [Dashboard](http://test1.wearemad.io/Admin)"
+
+  utter_hour:
+  - text: "Business Hours are From 8:00 AM to 10:00 PM"
+
+  utter_stats:
+  - text: "You can Find Statistics on [Dashboard](http://test1.wearemad.io/Admin)"
+  - text: "Statistics are Showed on [Dashboard](http://test1.wearemad.io/Admin)"
+
+  utter_no_login:
+  - text: "Please Check if Your Account is Deactivated/Deleted\n
+          or\n 
+          Try to Reset Your Account"
+
+  utter_login:
+  - text: "You can Register/Login from here [Login Page](http://test1.wearemad.io/login)"
+  utter_learn_more:
+  - text: "This [Documentation](https://docs.nopcommerce.com/en/index.html) can Help You"
+  - text: "You can take Reference from here [Documentation](https://docs.nopcommerce.com/en/index.html)"
+
+  utter_greet_bot:
+  - text: "Thank You Soo Much ;)"
+  - text: "I am Glad to Hear that!"
+
+  utter_company_info:
+  - text: "Learn more About us at [Ixxo.io](https://ixxo.io/)"
+
+  utter_contact_me:
+  - text: "You can Find us at
+  Phone : +123-456789
+  Email : [contact@wearemad.io](contact@wearemad.io)"
+
+  utter_greet:
+  - text: "Hey! I am Admin ChatBot"
+  - text: "Hello! I am Admin ChatBot"
+
+  utter_qa:
+  - text: "I can help you to Guide Through Admin related Features here"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+    buttons: 
+    - title: "Yes"
+      payload: '/affirm'
+    - title: "No"
+      payload: '/deny'
+  - text: "Is that What You are Looking for?"
+    buttons:
+    - title: "Yes"
+      payload: '/affirm'
+    - title: "No"
+      payload: '/deny'
+
+  utter_happy:
+  - text: "Great! Keep Going"
+
+  utter_positive:
+  - text: "Thanks for Your Feedback, Feel Free to Ask Anything from me"
+
+  utter_no_happy:
+  - text: "I am Soo Sad to Hear that\n Here is Something to Cheer You up\n
+    [Image](https://i.imgur.com/nGF1K8f.jpg)"
+
+  utter_search:
+  - text: "Try to Rephrase Your Sentence \n or \n If You didn't Find what you are Looking for You Can Always Search from Search Bar on Top Right Corner"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "GoodBye"
+
+  utter_iamabot:
+  - text: "I am a Admin Bot Powered by Rasa"
+  - text: "I am Admin Helper Bot by Rasa"
+
+  utter_help:
+  - text: "I can Help You with the Admin Related Features here" 
+  - text: "I can Guide You through The Admin Related Features here"
+
+  utter_ask_for_help:
+  - text: "Feel Free to Ask Anything I am Always Here to Help You"
+
+  utter_thanks_help:
+  - text: "You're Welcome Dear, Feel Free to Ask Anything I am Always Here"
+
+  utter_link:
+  - text: "Here is [Google](https://www.google.com/)"
+  
+# User Mangement 
+
+  utter_new_vendor:
+  - text: "To Add New Vendor Go to Customers > Vendor > Click on 'ADD NEW'\n
+  [Add New Vendor](http://test1.wearemad.io/Admin/Vendor/Create)"
+
+  utter_edit_vendor:
+  - text: "To Change Vendors Details Go to Customers > Vendor > Click 'EDIT' on Desired Vendors Profile to Make Changes\n
+  [Edit Vendor Details](http://test1.wearemad.io/Admin/Vendor/List)"
+
+  utter_remove_vendor:
+  - text: "To Remove Vendor Go to Customers > Vendor > Edit > Click on 'DELETE' to Delete Vendor\n
+  [Delete Vendor](http://test1.wearemad.io/Admin/Vendor/List)"
+
+  utter_vendor_list:
+  - text: "You can View Vendor from Customers > Vendor\n
+  [Vendors List](http://test1.wearemad.io/Admin/Vendor/List)"
+
+  utter_customer_link:
+  - text: "To View All Customers Navigate to Customers > Customers on the Left Pane\n
+  [Customers List](http://test1.wearemad.io/Admin/Customer/List)"
+
+  utter_new_customer:
+  - text: "To Add New Customers Navigate to Customers > Customers > Click 'ADD NEW' to Add a New Customer\n
+  [Add New Customer](http://test1.wearemad.io/Admin/Customer/Create)"
+  
+  utter_edit_customer:
+  - text: "To Change Customers Details Navigate to Customers > Customers > Click 'EDIT' on Desired Customers Profile to Make Changes\n
+  [Edit Customer Details](http://test1.wearemad.io/Admin/Customer/List)"
+
+  utter_deactivate_customer:
+  - text: "To Deactivate Customer Navigate to Customers > Customers > Choose From the List of Customers > Edit > Deselect 'ACTIVE' to Deactivate\n
+  [List of Customers](http://test1.wearemad.io/Admin/Customer/List)"
+
+  utter_reactivate_customer:
+  - text: "To Reactivate Customer Navigate to Customers > Customers > Choose from the List of Customers > Edit > Select 'ACTIVE' to Reactivate\n
+  [List of Customers](http://test1.wearemad.io/Admin/Customer/List)"
+
+  utter_customer_search:
+  - text: "To Search Customers Navigate to Customers > Customers > Search According to your Required Criteria\n
+  [Search Customers](http://test1.wearemad.io/Admin/Customer/List)"
+
+  utter_remove_customer:
+  - text: "To Remove Customers Navigate to Customers > Customers > Edit > Click on 'DELETE' Button to Remove Customer\n
+  [Delete Customer](http://test1.wearemad.io/Admin/Customer/List)"
+
+# Product Management
+
+  utter_publish_market:
+  - text: "You can Publish a Product to Market here Catalog > Products > Edit Product > Scroll to Market Section > Select a Market Type > Publish Market\n
+  [List of Products](http://test1.wearemad.io/Admin/Product/List)"
+
+  utter_new_product:
+  - text: "To Add a New Product Navigate to Catalog > Products > Click 'ADD NEW' > Add Details > then Save to Create New Product\n
+  [Add New Product](http://test1.wearemad.io/Admin/Product/Create)" 
+
+  utter_product_link:
+  - text: "Here You can Find/Manage All Products Navigate to Catalog > Products\n
+  [Products List](http://test1.wearemad.io/Admin/Product/List)"
+
+  utter_edit_product:
+  - text: "To Edit Products Navigate to Catalog > Products > Edit Desired Product > here You can Edit the Details of  Products\n
+  [List of Products](http://test1.wearemad.io/Admin/Product/List)\n
+  or\n
+  You Can Go to [Store](http://test1.wearemad.io/) SEARCH Desired Product > Click on Product > Click on 'MANAGE THIS PAGE' at Top to Make Changes to the Product\n
+  NOTE: Only Administrators Can do That"
+
+  utter_delete_product:
+  - text: "To Delete Products Navigate to Catalog > Products > Select the Desired Product > Click on 'DELETE' to Delete the Seleceted Products\n
+  [Delete Products](http://test1.wearemad.io/Admin/Product/List)"
+
+  utter_new_brand:
+  - text: "To Add a New Brand Navigate to Catalog > Brands > then Click on 'ADD NEW' Button to Add a New Brand\n
+  [List of Brands](http://test1.wearemad.io/Admin/Manufacturer/Create)"
+
+  utter_brands_link:
+  - text: "To View All Brands Navigate to Catalog > Brands > here You can View all the Brands\n
+  [Brands List](http://test1.wearemad.io/Admin/Manufacturer/List)\n
+  \n
+  You can also Search for Brands According your Creteria here"
+
+  utter_edit_brand:
+  - text: "To Edit Brands Navigate to Catalog > Brands > Edit Brand > then you can Edit Brand Details\n
+  [List of Brands](http://test1.wearemad.io/Admin/Manufacturer/List)"
+
+  utter_delete_brand:
+  - text: "To Delete Brand Navigate to Catalog > Brands > Edit Brand then Click on 'DELETE' Button to Delete the Brand \n
+  [Delete Brand](http://test1.wearemad.io/Admin/Manufacturer/List)"
+
+  utter_new_category:
+  - text: "To Add New Category Navigate to Catalog > Categories > then Click on 'ADD NEW' Button to Add a New Category\n
+  [Add New Category](http://test1.wearemad.io/Admin/Category/Create)\n
+  or\n
+  To Select Parent Category Navigate to Catalog > Categories > Edit Category > Select Parent Category"
+
+  utter_edit_category:
+  - text: "To Edit Category Navigate to Catalog > Categories > Edit Desired Category to make Changes in the Category\n
+  [Categories List](http://test1.wearemad.io/Admin/Category/List)\n
+  or\n 
+  To Edit Parent Category Navigate to Catalog > Categories > Edit Category > Select Parent Category"
+
+  utter_delete_category:
+  - text: "To Delete Category Navigate to Catalog > Categories > Edit Category > Click on 'Delete' to Delete the Category\n
+  [Delete Category](http://test1.wearemad.io/Admin/Category/List)"
+
+  utter_product_attribute:
+  - text: "To View All Product Attribute Go to Catalog > Attributes > Product Attributes > here You can View All Product Attributes\n
+  [Product Attributes](http://test1.wearemad.io/Admin/ProductAttribute/List)"
+
+  utter_new_attribute:
+  - text: "To Add a Attribute to Product Navigate to Catalog > Products > Edit > scroll to 'PRODUCT ATTRIBUTE SECTION' here you Can ADD Product Attributes to Your Product\n
+  [Add Attributes to Product](http://test1.wearemad.io/Admin/Product/List)\n
+  or\n
+  To Add New Attribute Navigate to Catalog > Attributes > Product Attributes > Click on 'ADD NEW' Button to Add a New Product Attribute\n
+  [Add New Attributes](http://test1.wearemad.io/Admin/ProductAttribute/Create)"
+
+  utter_edit_attributes:
+  - text: "To Edit Product Attributes Navigate to Catalog > Product > Edit Product > scroll to 'PRODUCT ATTRIBUTE SECTION' here you Can EDIT the Product Attributes\n
+  [Edit Product Attributes](http://test1.wearemad.io/Admin/Product/List)\n
+  or\n
+  To Edit Parent Attributes Navigate to Catalog > Attributes > Product Attributes > Edit > Edit Desired Attributes\n
+  [Edit Parent Attributes](http://test1.wearemad.io/Admin/ProductAttribute/List)"
+
+  utter_delete_attribute:
+  - text: "To Delete Product Attributes Navigate to Catalog > Product > Edit > Scroll to 'PRODUCT ATTRIBUTE SECTION' Click 'EDIT' then 'DELETE' Button to Delete Product Attribute\n
+  [Delete Product Attribute](http://test1.wearemad.io/Admin/Product/List)\n
+  or\n
+  To Delete Parent Attribute Navigate to Catalog > Attributes > Product Attributes > Edit > Click on 'DELETE' Button to Delete Desired Attribute\n
+  [Delete Parent Attributes](http://test1.wearemad.io/Admin/ProductAttribute/List)"
+
+# Market Management
+
+  utter_market_type:
+  - text: "To Create Market Go To Administration >  Catalog > Products > Search Product > Edit Product > Scroll to Market section Here you can select or Change 'MARKET TYPE' as Buy Only, Sell Only, Buy And Sell\n
+  http://test1.wearemad.io/Admin/Product/List" 
+
+  utter_markets_link:
+  - text: "You can Access the Markets from Catalog > Markets\n
+  http://test1.wearemad.io/Admin/Markets/Markets"
+
+# Admin Web Trade View
+
+  utter_market_order:
+  - text: "View All Market Orders from Sales > Market Orders\n
+  [Market Orders](http://test1.wearemad.io/Admin/Order/MarketOrders)"
+
+  utter_ecommerce_orders:
+  - text: "View All Ecommerce Orders from Sales > Orders\n
+  [Ecommerce Orders](http://test1.wearemad.io/Admin/Order/List)"
+
+  utter_trades:
+  - text: "View All Trades from Sales > Trades\n
+  [Trades](http://test1.wearemad.io/Admin/Order/Trades)"
+
+  utter_margin_commission_gesture:
+  - text: "You can Update Transaction Fee/Commission by Navigating to Sales > Margin Commercial Gesture\n
+  [Margin Commercial Gesture](http://test1.wearemad.io/Admin/Order/MarginCommercialGesture)"
+
+# Web Market Factory
+
+  utter_smarket:
+  - text: "To Stop Market Navigate to Catalog > Markets > Edit Market > Scroll to MARKET SECTION Where You can Unpublish Market\n
+  [Stop Market](http://test1.wearemad.io/Admin/Markets/Markets)"
+
+  utter_market_mgmt_link:
+  - text: "To Add Attributes to a Published Product Navigate to Navigate to > Catalog > Markets > Edit Market > Scroll to Product Attributes Where You can ADD or EDIT the Attribute\n
+  [Markets](http://test1.wearemad.io/Admin/Markets/Markets)"
+
+# Market Configuration
+
+# Misc
+  utter_shipping:
+  - text: "To Access Shipments Page go to Sales > Shipments\n
+  [Shipments Page](http://test1.wearemad.io/Admin/Order/ShipmentList)"
+
+  utter_public_profile:
+  - text: "To Setup Public Profiles go to Configuration > Market Configuration > Customer Profile\n
+  [Customer Profiles](http://test1.wearemad.io/Admin/CustomerProfileAttribute/CustomerProfileGroup)"
+
+  utter_order_match:
+  - text: "You can View Matched Orders at Configuration > Market Configuration > Order Match Records\n
+  [Order Match List](http://test1.wearemad.io/Admin/OrderMatch/List)"
+
+  utter_order_banner:
+  - text: "To Customize Order Banner Go to Configuration > WeAreMad Theme Configuration > Order Place Banner \n
+  [Order Banner Settings](http://test1.wearemad.io/Admin/WeAreMad/OrderPlaceBannerList)"
+
+  utter_order_book:
+  - text: "You can do OrderBook Configurations from Configuration > Market Configuration > OrderBook Settings\n
+  [Order Book Configurations](http://test1.wearemad.io/Admin/Ixxo/OrderBookConfiguration)"
+
+  utter_add_on:
+  - text: "You can Add Desired Controls from this Page Configuration > Settings > General Settings\n
+  [General Settings](http://test1.wearemad.io/Admin/Setting/GeneralCommon)"
+
+  utter_market_delta:
+  - text: "To Change Market Delta Go Catalog > Products > Search Product > Edit Product > Scroll to Price Delta Ranges Section Here you can change MARKET DELTA\n
+  [List of Products](http://test1.wearemad.io/Admin/Product/List)"
+
+  utter_setting_link:
+  - text: "You can do Related Configurations here Configuration > Market Configuration > General Settings\n
+  [Market Configuration Settings](http://test1.wearemad.io/Admin/Ixxo/Configuration)"
+
+  utter_customer_review_list:
+  - text: "You Can Find Customer Reviews here Catalog > Customer Reviews\n
+  (you can also delete them ;)\n
+  [Customer Reviews](http://test1.wearemad.io/Admin/Rating/customerreviews)"
+
+  utter_product_review:
+  - text: "You Can Find Product Reviews here Catalog > Product Reviews\n
+  (you can also delete them ;)\n
+  [Product Reviews](http://test1.wearemad.io/Admin/ProductReview/List)"
+
+  utter_shipmentp_link:
+  - text: "You can Keep Track all of Shipments from Sales > Shipments\n
+  [Shipments](http://test1.wearemad.io/Admin/Order/ShipmentList)"
+
+  utter_best_seller:
+  - text: "Find Best-Selling Products List here Reports > Bestsellers\n
+  [Bestsellers](http://test1.wearemad.io/Admin/Report/Bestsellers)"
+
+  utter_experts:
+  - text : "You can Find Experts from Customers > Experts\n
+  [Experts](http://test1.wearemad.io/Admin/Experts/List)"
+
+  utter_ptags:
+  - text: "Add/Remove Tags here Catalog > Product Tags\n
+  [Product Tags](http://test1.wearemad.io/Admin/Product/ProductTags)"
+
+  utter_cart:
+  - text: "To View Carts/Wishlists Go to Sales > Shopping Carts and Wishlists\n
+  [Shopping Carts](http://test1.wearemad.io/Admin/ShoppingCart/CurrentCarts)"
+
+  utter_mprofit:
+  - text: "List of Total Market Profit is here Sales > Market Profits\n
+  [Market Profits](http://test1.wearemad.io/Admin/Markets/MarketProfit)"
+
+  utter_global_market_config:
+  - text: "Change Global Market Configuration here Configuration > Market Configuration > Global Market Configuration\n
+  [Global Market Configuration](http://test1.wearemad.io/Admin/Setting/GlobalMarketConfiguration)"
+
+  utter_return_rqst:
+  - text: "See Return Requests from Sales > Return Requests \n
+  [Return Requests](http://test1.wearemad.io/Admin/ReturnRequest/List)"
+
+  utter_newsletter_subs:
+  - text: "This is the List of Newsletter Subscribers Promotions > Newsletter Subscribers\n
+  [Newsletter Subscribers](http://test1.wearemad.io/Admin/NewsLetterSubscription/List)"
+
+  utter_languages:
+  - text: "You can Edit Languages here Configuration > Languages\n
+  [Languages](http://test1.wearemad.io/Admin/Language/List)" 
+
+  utter_edit_page:
+  - text: "You can Edit Content of All Pages from this Screen Content Management > Topics\n
+  [Content Management System](http://test1.wearemad.io/Admin/Topic/List)"
+
+  utter_country_sales:
+  - text: "Find Country Wise Sales on this Page Report > Country Sales\n
+  [Country Sales](http://test1.wearemad.io/Admin/Report/CountrySales)"
+
+  utter_low_stock:
+  - text: "Find Low Stock Products here Report > Low Stock\n
+  [Low Stock](http://test1.wearemad.io/Admin/Report/LowStock)"
+
+  utter_worst_seller:
+  - text: "List of Worst Performing Products Reports > Products Never Purchased\n
+  [Products Never Purchased](http://test1.wearemad.io/Admin/Report/NeverSold)"
+
+  utter_tax_category:
+  - text: "View/Edit Tax Category here Configuration > Tax Categories\n
+  [Tax Categories](http://test1.wearemad.io/Admin/Tax/Categories)"
+
+  utter_dashboard:
+  - text: "Access Dashboard here\n
+  [Dashboard](http://test1.wearemad.io/Admin)" 
+
+  utter_ask_email:
+  - text: "Specify Which Emails You want to See"
+    buttons: 
+    - title: "Customer Emails"
+      payload: '/cemails'
+    - title: "Vendor Emails"
+      payload: '/vemails'
+
+  utter_cemails:
+  - text: "You can Find Customer Emails in\n
+  [Customers List](http://test1.wearemad.io/Admin/Customer/List)"
+
+  utter_vemails:
+  - text: "You can Find Vendor Emails in\n
+  [Vendors List](http://test1.wearemad.io/Admin/Vendor/List)"
+
+  utter_bot_mood:
+  - text: "I am All Set ;) What about You ?"
+    buttons:
+    - title: "All Fine"
+      payload: '/mood_great'
+    - title: "I am Not Well"
+      payload: '/mood_unhappy'
+
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

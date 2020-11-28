@@ -1,0 +1,30 @@
+version: "2.0"
+
+stories:
+
+- story: sad story
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: deny
+  - action: utter_no_happy
+  - action: utter_ask_for_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: thanks
+  - action: utter_thanks_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: happy story
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: thanks
+  - action: utter_thanks_help
+  - intent: affirm
+  - action: utter_happy
