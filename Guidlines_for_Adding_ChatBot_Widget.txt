@@ -1,0 +1,21 @@
+//To Add the Widget
+
+//Add the Following Code to Website Index Page in Body Tag
+
+<div id="webchat"></div>
+<script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+//Demo Widget for Admin ChatBot
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/get_started",
+    customData: {"language": "en"},
+    socketUrl: "http://51.158.96.209",//Change the URL to Crresponding RASA X Server URL
+    socketPath: "/socket.io/",
+    title: "Welcome",
+    subtitle: "I am Admin ChatBot",
+    params: {"storage": "session"}
+  })
+</script>
+
+//Save the Changes and Open the Website 

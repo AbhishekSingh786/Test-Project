@@ -6,13 +6,14 @@ nlu:
     - hey
     - hello
     - hi
+    - hii
+    - hlo
     - hello there
     - good morning
     - good evening
     - hey there
     - let's go
     - hey dude
-    - how are you
     - good morning
     - good evening
     - good afternoon
@@ -25,6 +26,7 @@ nlu:
     - good night
     - bye
     - goodbye
+    - good bye
     - have a nice day
     - see you around
     - bye bye
@@ -99,6 +101,10 @@ nlu:
     - please help
     - help me
     - help
+    - help please
+    - i can't find what i am looking for
+    - that's not what i am looking for
+    - it did not help me
 
 - intent: greet_bot
   examples: |
@@ -125,6 +131,7 @@ nlu:
     - company information
     - what is your company
     - company info
+    - more info
 
 - intent: affirm
   examples: |
@@ -186,6 +193,16 @@ nlu:
     - so perfect
     - :)
     - ;)
+    - 😁
+    - 😀
+    - 😉
+    - 😊
+    - 😃
+    - 😄
+    - 😎
+    - 😚
+    - 😙
+    - 😋
 
 - intent: mood_unhappy
   examples: |
@@ -208,6 +225,15 @@ nlu:
     - not good
     - I am not Fine
     - :(
+    - 😫
+    - 😣
+    - 😥
+    - 😓
+    - 😔
+    - 😕
+    - 😟
+    - 🙁
+    - 😖
 
 - intent: bot_chat
   examples: |
@@ -222,6 +248,8 @@ nlu:
     - how you doing
     - whatsupp
     - supp
+    - wassupp
+    - wassupp dude
 
 - intent: bot_challenge
   examples: |
@@ -388,6 +416,10 @@ nlu:
     - create new product in the market
     - add new product in market
     - how to add new product in market
+    - new market
+    - add new market
+    - create new market
+    - make new market
 
 - intent: new_product
   examples: |
@@ -422,9 +454,9 @@ nlu:
     - change text in orderbook
     - change product price
     - edit product price
-    - edit product [Apple MacBook Pro](PNAME)
-    - edit product [Digital Storm](PNAME)
-    - edit product [Lenovo Idea](PNAME)
+    - edit product [Rolex Submariner Date](PRODUCTDATA)
+    - edit product [Audemars Piguet](PRODUCTDATA)
+    - edit product [TAG Heuer Carrera Lady](PRODUCTDATA)
     - edit orderbooks
     - product details
     - change product
@@ -438,11 +470,11 @@ nlu:
     - i want to remove product
     - i want to delete product
     - how to delete product
-    - delete [Apple MacBook Pro](PNAME) from products
-    - delete [Digital Storm](PNAME)
-    - delete product [Lenovo Idea](PNAME)
-    - remove [Digital Storm](PNAME)
-    - remove product [Lenovo IdeaS](PNAME)
+    - delete [Bulgari Lucea](PRODUCTDATA) from products
+    - delete [Zenith Grande ChronoMaster XXT](PRODUCTDATA)
+    - delete product [Seiko Prospex PADI](PRODUCTDATA)
+    - remove [IWC Timezoner Chronograph](PRODUCTDATA)
+    - remove product [Patek Philippe Nautilus 40MM 18K Rose Gold Chronograph Watch](PRODUCTDATA)
 
 - intent: new_brand
   examples: |
@@ -658,7 +690,6 @@ nlu:
 - intent: stop_market
   examples: |
     - stop Market
-    - stop markets
     - end Market
     - unpublish market
     - delete market
@@ -683,10 +714,16 @@ nlu:
 
 - intent: myacc
   examples: |
-    - vendor review
+    - my account
+    - open my account
+    - vendor reviews
+    - show vendor reviews
+    - show buyer reviews
     - buyers review
     - due payment
+    - show due payments
     - past trades
+    - show past trades
 
 - intent: dashboard_reference
   examples: |
@@ -985,15 +1022,410 @@ nlu:
     - Country Sale
     - Country Wise Sales
 
-- lookup: PNAME
+# Product Data Section ------------------------------------------------------------------------------------------------ 
+
+- lookup: PRODUCTDATA
   examples: |
-    - Digital Storm
-    - Lenovo Idea
-    - Apple MacBook Pro
-    - Asus XO076H
-    - Samsung Galaxy S11
-    - HTC One Pro Max
-    - IPhone 12 Pro Max
-    - Sony Xperia X11
-    - Adobe Photoshop CS4
-    - Windows 8 Pro
+    - A new Rolex Watch
+    - Audemars Piguet
+    - Audemars Piguet Royal Oak
+    - Audemars Piguet Royal Oak Diamond Black Dial 33MM Watch 67601ST.ZZ.D002CR.01
+    - Bell & Ross Instruments BR 03-92 Military Type Men's Watch - BR0392-MIL-CE
+    - Bell & Ross Marine 92 BR02-PINKGOLD-CA
+    - Bell & Ross Vintage Aeronavale Automatic Men's 43mm Watch BRV123-BLU-STSCA
+    - Blancpain フィフティファゾムスバチスカーフ
+    - Boris Watches
+    - Breitling Avenger Hurricane 24H 50mm Black XB1210E4BE89 (NEW 2020)
+    - Breitling Avenger Hurricane 45 12H 45mm Yellow XB0180E4I534 (2020)
+    - Breitling Blackbird Chronomat LIMITED Steel A4436010BB71
+    - Bulgari Lucea 103029
+    - Bulgari Lucea Stainless Silver Dial Automatic Ladies WatchBox 102219 LU33C66SSD
+    - Bulgari Lucea Stainless Steel Automatic Ladies Watch - LU33WSSD11
+    - Cartier Santos-Dumont 38 x 27.5 mm Quartz Silver Dial Stainless Steel Small Ladies Watch - WSSA002
+    - Chopard Happy Sport, Happy Diamonds Fish, Ref 288347, BLack Dial
+    - DISTRICT_M1 WATCH
+    - Gazelle
+    - Girard Perregaux Chrono Hawk Ceramic Chronograph Automatic 44mm Men's Watch
+    - Hublot Big Bang Unico King Gold 441.OM.1180.RX
+    - Hublot Classic Fusion Automatic Grey Dial Titanium Men's Watch - 542.NX.7071.LR
+    - Hublot Techframe Ferrari Tourbillon Chronograph Limited Edition 408.JW.0123.RX
+    - IPhone 11
+    - IPhone 11 Plus
+    - iPhone SE
+    - iphone se new
+    - IWC Pilot's Watches Automatic Grey Dial Men's Watch - IW501902
+    - IWC Portugieser Automatic Black Dial Men's Watch - IW500703
+    - IWC Portugieser Yacht Club Worldtimer Automatic Grey Dial Limited Editon Men's Watch - IW32660
+    - IWC Timezoner Chronograph
+    - JAEGER LECOULTRE
+    - JAEGER LECOULTRE Jaeger Lecoultre Reverso Classic Medium Automatic Men's Watch
+    - JAEGER LECOULTRE Master Ultra Thin Moonphase Ivory Dial Brown Leather Men's Watch
+    - JAEGER LECOULTRE Master Ultra Thin Perpetual Automatic Silver Dial Men's Watch
+    - JAEGER LECOULTRE Reverso Classic Hand Wound Men's Watch
+    - Jaeger-LeCoultre Polaris Chronograph Automatic Blue Dial Men's Watch - Q9028480
+    - Luxury Brand Watch
+    - OLD GRANDFATHER WATCH
+    - Omega 1960s Seamaster Deville Cross Hair Automatic Steel Vintage Watch
+    - Omega Constellation Automatic Chronometer 18k Solid Gold Half Bar/SS Mens Watch....35mm
+    - Omega Moonphase Speedmaster 304.63.44.52.02.001 Yellow Gold Case 44.25mm Crocodile ba
+    - Omega Seamaster Aqua Terra 150M Co-Axial Master Chronometer 41 mm Automatic Silver Dial Steel Me
+    - Omega Seamaster Aqua Terra Chronograph Men's Watch 44mm - 231.10.44.50.09.001
+    - Omega Seamaster Automatic 18k Yellow Gold & Steel 41mm Men's Watch
+    - Omega Speedmaster Moonwatch “ First Omega In Space 18K Sedna gold 311.63.40.30.02.001
+    - Omega Speedmaster Racing Co-Axial Master Chronometer Chronograph 44.25 mm Automatic Grey Dial St
+    - Order Match Test
+    - Panerai  Radiomir Chronograph  PAM 288  Stainless Steel automatic PAM00288
+    - Panerai Luminor Submersible Chrono Automatic Black Dial 47 mm Men's Watch - PAM00614
+    - Patek Philippe Nautilus 40MM 18K Rose Gold Chronograph Watch 5980/1R-001
+    - Patek Philippe Ultra Rare Ref. 782 Golf, Gilbert Albert Design Pocket Watch
+    - Patek Philippe Very Rare Ref. 4184 Calatrava Bracelet Watch in 18K Gold
+    - ROLEX
+    - ROLEX - copy
+    - ROLEX - COSMOGRAPH DAYTONA
+    - ROLEX - DATEJUST
+    - ROLEX - DATEJUST DAYTONA
+    - ROLEX - DWELL DAYTONA
+    - ROLEX - NIGHT DWELL
+    - ROLEX - SEA DWELLER
+    - ROLEX - SKY DWELLER
+    - Rolex 1675 GMT Master Brown Nipple Dial Root Beer Bezel NICE (34376)
+    - ROLEX BEST WATCH
+    - Rolex Datejust II 41 MM Oyster Perpetual 18K Gold Diamonds
+    - Rolex Datejust II 41MM SS w7.0Ct Diamond Dial, Lugs, Case & Bracelet Box Papers
+    - Rolex Datejust II Steel 41mm Black Index Dial Oyster Bracelet
+    - Rolex Datejust II Steel 41mm Silver Index Dial Oyster Bracelet
+    - Rolex Daytona 116503 NEW 2020 Black Dial
+    - Rolex Lady-Datejust
+    - Rolex Men's Rolex Oyster Date Ref.15505 34mm Automatic Diamond Dial, c.1980s LV971
+    - Rolex Oyster Perpetual Lady Date
+    - Rolex Sea-Dweller 126600 NEW 2020
+    - Rolex Submariner Date
+    - Rolex Top Watch
+    - Rolex Ultra Rare 18K Precision Chronometer Pocket Watch, 1960's
+    - ROLEX watch test
+    - Rolex Yacht-master 40mm Steelrose With Rolex Box
+    - Rolex Yacht-Master Automatic Black Dial 18kt Everose Gold Black Rubber Strap Unisex Watch
+    - Samsung 2100
+    - Seiko Marine Master Professional 300M Tuna SBBN031 - SBBN031
+    - Seiko Prospex 200m Great Blue Hole Baby Marine Master
+    - Seiko Prospex PADI
+    - Sony WiX00
+    - T Product name
+    - TAG Heuer Carrera Calibre 16 Automatic Black Dial Chronograph Men's Watch - CBK2110.FC6266
+    - TAG Heuer Carrera Calibre Heuer 02 Automatic Black Skeleton Men's Watch - CBG2A90.BH0653
+    - TAG Heuer Carrera Lady
+    - TAG Heuer Carrera Tachymeter Automatic Grey Dial Men's Watch - CAR201W.BA0714
+    - Test Product 1
+    - testbysmiten
+    - testnew product by sk
+    - testP
+    - Tudor Heritage Chrono BlackTextile 42mm - 70330N
+    - Universal Genève Vintage Uni Compax Chronograph Ref 22296-4, All Original
+    - vNewProduct
+    - vProduct Name1
+    - vProduct Name2
+    - vProduct31-edit
+    - vProduct-Test
+    - vpTest
+    - vTestProduct
+    - Vulcain Aviator Cricket Dual Time Men's Manual-Wind 42mm Watch 100133.210LF
+    - Zenith El Primero - Chronomaster - 42mm - 36'000 VpH - Chronograph
+    - Zenith Grande ChronoMaster XXT
+    - Zenith Pilot Type 20 Extra Special 29.2430.67921.c753
+    - Football Market 2
+    - Football Market
+    - Football Market sheetal
+    - Football Market 5
+    - Football Market 3
+    - Football Market 1
+    - Football Market 4
+    -	IWC Shaffhausen
+    - Jaeger Le Coultre
+    - Omega
+    - Patek Philippe
+    - Rolex
+    - CITROEN E-BERLINGO 3 MULTISPACE
+    - CITROEN GRAND C4 SPACETOURER
+    - OPEL ASTRA 5
+    - PEUGEOT 3008 (2E GENERATION)
+    - MERCEDES CLASSE E 4 COUPE
+    - ROLEX - SKY DWELLER
+    - PEUGEOT 2008 (2E GENERATION)
+    - RENAULT CAPTUR
+    - BMW I3
+    - ALFA ROMEO MITO
+    - AUDI A5 SPORTBACK (2E GENERATION)
+    - CITROEN C4 PICASSO 2
+    - PEUGEOT 5008
+    - RENAULT MEGANE 4
+    - HYUNDAI I30 (3E GENERATION)
+    - FIAT SEDICI
+    - PEUGEOT PARTNER
+    - BMW SERIE 2 F46 GRAN TOURER
+    - RENAULT LAGUNA 3
+    - VOLKSWAGEN TOURAN
+    - MERCEDES CLASSE C 4 SW
+    - RENAULT ZOE
+    - FORD GALAXY 3
+    - FIAT IDEA
+    - BMW SERIE 3 G21 TOURING
+    - FIAT 500 (2E GENERATION)
+    - OPEL ZAFIRA 3 TOURER
+    - TOYOTA YARIS 3
+    - JAEGER LECOULTRE Master Ultra Thin Moonphase Ivory Dial Brown Leather Men's Watch
+    - CITROEN C-ZERO
+    - test product to check email
+    - JAGUAR I-PACE
+    - FORD GRAND C-MAX 2
+    - DACIA sandero
+    - KIA CARENS 3
+    - CHRYSLER PT CRUISER
+    - MERCEDES CLASSE G 3 AMG
+    - FORD S-MAX
+    - DACIA DOKKER
+    - HONDA CIVIC 9
+    - MINI MINI 3 3P
+    - PEUGEOT 508 RXH
+    - MERCEDES GLC
+    - BMW SERIE 7 G12
+    - JAGUAR F-PACE
+    - CITROEN XSARA PICASSO
+    - OPEL MERIVA 2
+    - ROLEX - SEA DWELLER
+    - MERCEDES VITO
+    - VOLVO S90 (2E GENERATION)
+    - BMW SERIE 4 F33 CABRIOLET
+    - KIA SOUL 2
+    - AUDI A3 (4E GENERATION) SPORTBACK
+    - ALFA ROMEO GIULIA 2
+    - CITROEN C3 (3E GENERATION)
+    - VOLVO S60 (3E GENERATION)
+    - FIAT PANDA 3
+    - BMW SERIE 4 F36 GRAN COUPE
+    - MINI MINI 3 5P
+    - OPEL MERIVA
+    - NISSAN NOTE
+    - OPEL MOKKA X
+    - OPEL CORSA 5
+    - AUDI A7 SPORTBACK
+    - MINI MINI 2 3P
+    - ROLEX - copy
+    - MERCEDES CLASSE A 4
+    - MERCEDES CLASSE B 2
+    - BMW X6 F86 M
+    - INFINITI Q50
+    - LAND ROVER RANGE ROVER VELAR
+    - BMW X4 F98 M
+    - CITROEN BERLINGO 2 MULTISPACE
+    - MERCEDES GLC COUPE
+    - Skoda Octavia
+    - Luxury Brand Watch
+    - PEUGEOT 407
+    - BMW SERIE 6 F13
+    - AUDI A4 ALLROAD
+    - BMW SERIE 3 G20
+    - BMW SERIE 2 F45 ACTIVE TOURER
+    - RENAULT CLIO 5
+    - MERCEDES CLASSE B 3
+    - PORSCHE PANAMERA
+    - KIA VENGA
+    - BMW X5 F15
+    - HYUNDAI TUCSON 3
+    - CITROEN BERLINGO 3 MULTISPACE
+    - LEXUS RX 3
+    - TOYOTA RAV 4 (5E GENERATION)
+    - CITROEN C3 (2E GENERATION)
+    - ROLEX - DWELL DAYTONA
+    - CITROEN DS4
+    - RENAULT KADJAR
+    - BMW X6 E71 M
+    - FORD FIESTA 6
+    - MINI MINI 3 CLUBMAN
+    - DACIA LODGY
+    - LAND ROVER DISCOVERY 4
+    - TOYOTA PROACE 2
+    - RENAULT CAPTUR 2
+    - RENAULT KOLEOS
+    - Blancpain フィフティファゾムスバチスカーフ
+    - RENAULT KANGOO 2 EXPRESS
+    - HYUNDAI I40
+    - AUDI A1 SPORTBACK
+    - test product to check expert validation
+    - SMART FORFOUR 2
+    - DACIA LODGY STEPWAY
+    - FIAT 500 L
+    - ROLEX - DATEJUST
+    - JAEGER LECOULTRE Reverso Classic Hand Wound Men's Watch
+    - FORD C-MAX 2
+    - RENAULT MODUS
+    - CITROEN C4 SPACETOURER
+    - NISSAN LEAF
+    - LEXUS CT
+    - mercedesbenz 170
+    - LEXUS RX 4
+    - FORD MONDEO 4
+    - OPEL INSIGNIA 2 GRAND SPORT
+    - CITROEN C4 PICASSO
+    - VOLKSWAGEN TIGUAN 2
+    - BMW SERIE 1 E88 CABRIOLET
+    - PEUGEOT 2008
+    - HONDA INSIGHT 2
+    - Rolex Top Watch
+    - BMW SERIE 1 F21 3 PORTES
+    - PEUGEOT 308 (2E GENERATION) SW
+    - BMW SERIE 1 F20 5 PORTES
+    - LAND ROVER RANGE ROVER SPORT 2
+    - AUDI A3 (3E GENERATION) SPORTBACK
+    - ROLEX - Cosmograph Daytona
+    - AUDI Q2
+    - FIAT 500 X
+    - PEUGEOT 807
+    - JEEP COMPASS 2
+    - VOLKSWAGEN GOLF 8
+    - NISSAN GT-R
+    - CITROEN BERLINGO 3
+    - FORD C-MAX
+    - TESLA MODEL S
+    - OPEL CROSSLAND X
+    - RENAULT ESPACE 5
+    - BMW X1 F48
+    - TOYOTA VERSO-S
+    - TOYOTA PROACE 2 VERSO
+    - CITROEN C3 AIRCROSS
+    - BMW SERIE 1 E87 5 PORTES
+    - RENAULT KOLEOS 2
+    - RENAULT SCENIC 3 XMOD
+    - BMW X4 F26
+    - MERCEDES GLC AMG
+    - PEUGEOT 3008
+    - BMW X3 F25
+    - MASERATI GHIBLI 3
+    - NISSAN JUKE
+    - AUDI A4 (5E GENERATION) AVANT
+    - SKODA SCALA
+    - NISSAN JUKE 2
+    - RENAULT SCENIC 2
+    - BMW SERIE 7 G11
+    - PEUGEOT E-208 (2E GENERATION)
+    - OPEL CORSA 6
+    - RENAULT CLIO 4
+    - SEAT ATECA
+    - MERCEDES GLE
+    - VOLVO XC60
+    - DODGE CALIBER
+    - DS DS 7 CROSSBACK
+    - Honda Civic
+    - PEUGEOT TRAVELLER
+    - CITROEN JUMPY 3
+    - RENAULT SCENIC 4
+    - KIA E-SOUL
+    - BMW X5 E70 M
+    - VOLKSWAGEN TOURAN 3
+    - RENAULT KANGOO 2
+    - HONDA CIVIC 8
+    - test product to check paid api
+    - VOLVO XC60 (2E GENERATION)
+    - OPEL INSIGNIA
+    - RENAULT TWINGO 3
+    - PEUGEOT 5008 (2E GENERATION)
+    - BMW X2 F39
+    - PEUGEOT 508 (2E GENERATION)
+    - MINI COUNTRYMAN 2
+    - FORD TOURNEO CONNECT 2
+    - MERCEDES CLASSE E 5
+    - VOLKSWAGEN GOLF SPORTSVAN
+    - MASERATI QUATTROPORTE 6
+    - MERCEDES CLASSE V 2 LONG
+    - ROLEX - DATEJUST DAYTONA
+    - HYUNDAI I20 (2E GENERATION)
+    - test weare mad product to check multiple order
+    - FIAT DOBLO 2
+    - TOYOTA AYGO 2
+    - MERCEDES CLASSE C 4
+    - CITROEN SPACETOURER
+    - MINI COUNTRYMAN
+    - BMW SERIE 5 G30
+    - LEXUS LC
+    - BMW X4 G02
+    - HONDA CIVIC 10
+    - BMW X5 F85 M
+    - JEEP RENEGADE
+    - SUZUKI SWIFT 4
+    - CITROEN C5 AIRCROSS
+    - AUDI E-TRON
+    - JAEGER LECOULTRE Jaeger Lecoultre Reverso Classic Medium Automatic Men's Watch
+    - IPhone 11 Plus
+    - MERCEDES CLASSE C 4 CABRIOLET
+    - HYUNDAI SANTA FE 2
+    - iPhone SE
+    - FORD FOCUS 4
+    - Peugeot 206
+    - HYUNDAI IONIQ
+    - PEUGEOT 308 (2E GENERATION)
+    - MAZDA 3 (3E GENERATION)
+    - CITROEN GRAND C4 PICASSO 2
+    - MERCEDES CLASSE A 4 BERLINE
+    - SKODA RAPID 2 SPACEBACK
+    - FORD B-MAX
+    - CHRYSLER PT CRUISER CABRIO
+    - AUDI Q5 (2E GENERATION)
+    - KIA SPORTAGE 4
+    - RENAULT GRAND SCENIC 4
+    - MERCEDES CLASSE S 7
+    - AUDI A6 (4E GENERATION) ALLROAD
+    - PORSCHE MACAN
+    - Passat 2L tdi 140
+    - PORSCHE 911 TYPE 997
+    - SEAT LEON 3 SC
+    - NISSAN MICRA 5
+    - BMW X3 G01
+    - PEUGEOT PARTNER 2 TEPEE
+    - OPEL ZAFIRA 2
+    - AUDI A3 (3E GENERATION) BERLINE
+    - PEUGEOT 108
+    - AUDI SQ7 (2E GENERATION)
+    - CITROEN C4 CACTUS
+    - PEUGEOT 308
+    - PEUGEOT 208 (2E GENERATION)
+    - TOYOTA C-HR
+    - VOLVO XC90 (2E GENERATION)
+    - KIA E-NIRO
+    - FORD KUGA 2
+    - JAEGER LECOULTRE Master Ultra Thin Perpetual Automatic Silver Dial Men's Watch
+    - CITROEN GRAND C4 PICASSO
+    - CHRYSLER GRAND VOYAGER 4
+    - VOLKSWAGEN TOUAREG
+    - SEAT ALTEA XL
+    - DS DS 3 CROSSBACK
+    - BMW SERIE 1 F40
+    - RENAULT SCENIC 3
+    - SEAT LEON 3
+    - NISSAN QASHQAI 2
+    - IPhone 11
+    - VOLKSWAGEN TOURAN 2
+    - RENAULT GRAND MODUS
+    - PORSCHE CAYENNE 2
+    - FIAT TIPO 2
+    - MERCEDES CLASSE V 2 EXTRA-LONG
+    - SEAT TARRACO
+    - MERCEDES CLASSE A 2
+    - BMW SERIE 1 E82 COUPE
+    - PORSCHE CAYENNE 3
+    - FIAT TIPO 2 BERLINE
+    - Test Product 1
+    - SEAT IBIZA 5
+    - VOLKSWAGEN GOLF 7
+    - FIAT TALENTO
+    - MERCEDES EQC
+    - ALFA ROMEO STELVIO
+    - RENAULT MEGANE 3
+    - ROLEX
+    - MASERATI LEVANTE
+    - NISSAN PATHFINDER
+    - TOYOTA VERSO
+    - OPEL KARL
+    - VOLKSWAGEN PASSAT 8 SW
+    - ROLEX - NIGHT DWELL
+    - MAZDA CX-5 (2E GENERATION)
+    - PEUGEOT 508 SW
+    - MERCEDES VIANO

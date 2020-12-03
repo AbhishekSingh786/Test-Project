@@ -1,7 +1,7 @@
 [
   {
-    "text": "how to edit product attribute",
-    "intent": "edit_attributes",
+    "text": "stop markets",
+    "intent": "stop_market",
     "intent_prediction": {
       "name": "nlu_fallback",
       "confidence": 1.0

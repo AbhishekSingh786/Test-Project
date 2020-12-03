@@ -1,24 +1,6 @@
-# Steps For Adding Widget in the Website
+# Steps For BOT Integration
 
-- Add the Following Script in the Body Tag of Website 
-
-
-<div id="webchat"></div>
-<script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
-<script>
-  WebChat.default.init({
-    selector: "#webchat",
-    initPayload: "/get_started",
-    customData: {"language": "en"},
-    socketUrl: "http://51.158.96.209",
-    socketPath: "/socket.io/",
-    title: "Welcome",
-    subtitle: "I am Admin ChatBot",
-    params: {"storage": "session"}
-  })
-</script>
-
-Note - Change the socketUrl with the RASA X Server URL
+- Add the Script from BOT_SCRIPT.txt in Website
 
 # Steps For RASA X Installation on Server
 
@@ -28,7 +10,7 @@ Note - Change the socketUrl with the RASA X Server URL
 
 - Go to /etc/rasa Directory
 
-- Edit credentials.yml File with the Following Information
+- Edit credentials.yml File with the Following Code
 
   `socketio:
   user_message_evt: user_uttered
@@ -41,7 +23,7 @@ Note - Change the socketUrl with the RASA X Server URL
 
 - Login to RASA X Server with Password You've Provided in the Installation
 
-- Add Latest Model From /models Directory (Note: You have to Clone this Directory to Upload Model to RASA X Server)
+- Add Latest Model From /MASTER/models Directory (Note: You have to Clone this Directory to Upload Model to RASA X Server)
 
 - After Uploading Model Make the Model Active and You are Ready to Go
 
